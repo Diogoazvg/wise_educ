@@ -1,5 +1,15 @@
-<% if user_signed_in? %>
-  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to "Sign in", new_user_session_path %>
-<% end %>
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50 px-4 py-12">
+  <div class="salient-card bg-white p-8 shadow-lg max-w-lg w-full">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-gray-800">Welcome to Wise Educ</h2>
+      <p class="text-gray-600 mt-2">Your platform for smart education solutions.</p>
+    </div>
+    <div class="text-center mt-6">
+      <%= link_to "Sign up", new_user_registration_path, class: "salient-btn w-full py-3 px-4 rounded-lg text-white font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 mb-4" %>
+      <%= link_to "Log in", new_user_session_path, class: "salient-btn w-full py-3 px-4 rounded-lg text-white font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" %>
+    </div>
+    <div class="text-center mt-6">
+      <p class="text-xs text-gray-500">&copy; 2023 Wise Educ. All rights reserved.</p>
+    </div>
+  </div>
+</div>
